@@ -1,0 +1,39 @@
+{
+  "name": "express-ts-errors",
+  "private": true,
+  "version": "1.0.0",
+  "description": "demonstrate TypeScript stack traces in express",
+  "repository": "bcoe/express-ts-errors",
+  "license": "MIT",
+  "author": "Ben Coe <bencoe@gmail.com>",
+  "files": [
+    "build/src"
+  ],
+  "main": "build/src/index.js",
+  "scripts": {
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "lint": "gts check",
+    "prepare": "npm run compile",
+    "test": "npm run lint",
+    "preserve": "npm run compile",
+    "serve": "node build/src/index.js",
+    "preserve-source-map-support": "npm run compile",
+    "serve-source-map-support": "node -r source-map-support/register build/src/index.js"
+  },
+  "devDependencies": {
+    "@types/depd": "^1.1.32",
+    "@types/express": "^4.17.2",
+    "gts": "^1.0.0",
+    "source-map-support": "^0.5.16",
+    "typescript": "^3.7.5"
+  },
+  "engines": {
+    "node": ">=8.13.0"
+  },
+  "dependencies": {
+    "depd": "^2.0.0",
+    "express": "^4.17.1"
+  }
+}
